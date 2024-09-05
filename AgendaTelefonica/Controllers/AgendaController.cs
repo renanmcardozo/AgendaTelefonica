@@ -19,6 +19,16 @@ namespace AgendaTelefonica.Controllers
             _context = context;
         }
 
+        public async Task<IActionResult> Busca()
+        {
+            return View();
+        }
+        public async Task<IActionResult> ShowSearchResults(String TermoDeBusca)
+        {
+            List<Agenda> agendatelefonica = await _context.Agenda.Where(f => f.Nome.Contains(TermoDeBusca)).ToListAsync();
+            return View("Index", agendatelefonica);
+        }
+
         // GET: Agenda
         public async Task<IActionResult> Index()
         {

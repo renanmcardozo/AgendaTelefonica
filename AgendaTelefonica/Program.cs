@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using AgendaTelefonica.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AgendaTelefonicaDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("AgendaTelefonicaDbContext") ?? throw new InvalidOperationException("Connection string 'AgendaTelefonicaDbContext' not found.")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("AgendaTelefonicaDbContext") ?? throw new InvalidOperationException("Connection string 'AgendaTelefonicaDbContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
