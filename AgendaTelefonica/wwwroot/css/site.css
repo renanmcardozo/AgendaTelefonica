@@ -1,22 +1,103 @@
+/* Definindo a fonte base e o tamanho */
 html {
   font-size: 14px;
+  line-height: 1.6;
+  background: url('fone.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
+/* Ajustes para dispositivos maiores */
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+/* Estilizando o corpo */
+body {
+  margin: 0;
+  font-family: 'Dancing Script', cursive; /* Fonte mais feminina */
+  color: #3e2723; /* Marrom escuro */
+  background-color: #f5f0f0; /* Bege claro */
+  text-align: center; /* Centralizando o texto */
+  padding: 2rem; /* Espaçamento interno */
 }
 
+/* Adicionando estilos modernos aos botões */
+.btn {
+  background-color: #d5a6a1; /* Tom pastel de rosa/marrom */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #c18a8a; /* Tom mais escuro de rosa/marrom */
+  box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.1), 0 0 0 0.25rem rgba(214, 161, 161, 0.5);
+}
+
+.btn:active {
+  background-color: #a76f6f; /* Tom mais escuro de rosa/marrom */
+}
+
+/* Estilizando links e botões de links */
+.btn-link.nav-link {
+  color: #d5a6a1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.btn-link.nav-link:hover,
+.btn-link.nav-link:focus {
+  color: #c18a8a;
+  text-decoration: underline;
+}
+
+/* Estilizando os campos de formulário e inputs */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #d5a6a1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #c18a8a;
+  box-shadow: 0 0 0 0.1rem rgba(214, 161, 161, 0.25);
+}
+
+/* Estilizando inputs de checkbox */
+.form-check-input {
+  cursor: pointer;
+}
+
+/* Garantindo que a interface ocupe toda a altura da tela */
 html {
   position: relative;
   min-height: 100%;
 }
 
+/* Adicionando um rodapé fixo */
 body {
   margin-bottom: 60px;
+  padding-bottom: 60px; /* espaço para o rodapé */
+}
+
+/* Rodapé fixo */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d5a6a1;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
 }
